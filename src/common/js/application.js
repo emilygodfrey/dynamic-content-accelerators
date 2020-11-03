@@ -19,11 +19,11 @@
     if (sDefault) return sDefault;
   };
 
-  var vse = getUrlParameter('vse', 'grandvisionpoc.cdn.content.amplience.net');
+  var vse = getUrlParameter('vse', 'kpszurrose.cdn.content.amplience.net');
   var crsvse = getUrlParameter('vse', 'c1-orig.adis.ws');
-  var key = getUrlParameter('key', 'grandvisionpoc/web/home');
-  var menukey = getUrlParameter('menukey', 'grandvisionpoc/web/menu');
-  var locale = getUrlParameter('locale', 'en-GB,en-*');
+  var key = getUrlParameter('key', 'zurrosepoc/web/home');
+  var menukey = getUrlParameter('menukey', 'zurrosepoc/web/navigation');
+  var locale = getUrlParameter('locale', 'de-DE,*-CH');
   var cid = getUrlParameter('cid');
   var timestamp = getUrlParameter('timestamp');
   var segmentParam = getUrlParameter('segment');
