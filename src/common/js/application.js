@@ -19,11 +19,11 @@
     if (sDefault) return sDefault;
   };
 
-  var vse = getUrlParameter('vse', 'kpszurrose.cdn.content.amplience.net');
+  var vse = getUrlParameter('vse', 'infosys.cdn.content.amplience.net');
   var crsvse = getUrlParameter('vse', 'c1-orig.adis.ws');
-  var key = getUrlParameter('key', 'zurrosepoc/web/home');
-  var menukey = getUrlParameter('menukey', 'zurrosepoc/web/navigation');
-  var locale = getUrlParameter('locale', 'de-DE,*-CH');
+  var key = getUrlParameter('key', 'infosys/web/home');
+  var menukey = getUrlParameter('menukey', 'infosys/web/navigation');
+  var locale = getUrlParameter('locale', 'en-UK,en-*');
   var cid = getUrlParameter('cid');
   var timestamp = getUrlParameter('timestamp');
   var segmentParam = getUrlParameter('segment');
