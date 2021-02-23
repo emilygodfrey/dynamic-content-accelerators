@@ -21,9 +21,9 @@
 
   var vse = getUrlParameter('vse', 'infosys.cdn.content.amplience.net');
   var crsvse = getUrlParameter('vse', 'c1-orig.adis.ws');
-  var key = getUrlParameter('key', 'infosys/web/home');
-  var menukey = getUrlParameter('menukey', 'infosys/web/navigation');
-  var locale = getUrlParameter('locale', 'en-UK,en-*');
+  var key = getUrlParameter('key', 'christ/web/home');
+  var menukey = getUrlParameter('menukey', 'christ/web/navigation');
+  var locale = getUrlParameter('locale', 'de-DE,en-UK,en-*');
   var cid = getUrlParameter('cid');
   var timestamp = getUrlParameter('timestamp');
   var segmentParam = getUrlParameter('segment');
