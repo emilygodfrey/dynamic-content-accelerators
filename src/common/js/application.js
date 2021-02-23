@@ -19,11 +19,11 @@
     if (sDefault) return sDefault;
   };
 
-  var vse = getUrlParameter('vse', 'infosys.cdn.content.amplience.net');
+  var vse = getUrlParameter('vse', 'Christ-POC.cdn.content.amplience.net');
   var crsvse = getUrlParameter('vse', 'c1-orig.adis.ws');
   var key = getUrlParameter('key', 'christ/web/home');
   var menukey = getUrlParameter('menukey', 'christ/web/navigation');
-  var locale = getUrlParameter('locale', 'de-DE,en-UK,en-*');
+  var locale = getUrlParameter('locale', 'de-DE,en-GB,en-*');
   var cid = getUrlParameter('cid');
   var timestamp = getUrlParameter('timestamp');
   var segmentParam = getUrlParameter('segment');
