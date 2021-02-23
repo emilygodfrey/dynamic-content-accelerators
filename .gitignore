@@ -5,3 +5,4 @@ dist/*
 .automation-credentials-gap.json
 .automation-*
 .config*
+automation-credentials.json
