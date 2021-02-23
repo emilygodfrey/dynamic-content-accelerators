@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "{CONTENT_TYPE_BASEPATH}/blog.json",
+  "title": "Blog",
+  "description": "A Blog Post",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "snippet": {
+      "type": "object",
+      "title": "Blog Snippet",
+      "description": "Blog Snippet",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/blogSnippet.json"
+        }
+      ]
+    },
+    "content": {
+      "type": "object",
+      "title": "Blog Content",
+      "description": "The main content for the blog",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/rich-text.json"
+        }
+      ]
+    },
+    "contentTypes": {
+      "type": "array",
+      "title": "Content Type",
+      "description": "Select and order content to display in the page",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "{CONTENT_TYPE_BASEPATH}/image.json",
+                  "{CONTENT_TYPE_BASEPATH}/banner.json",
+                  "{CONTENT_TYPE_BASEPATH}/simple-image-banner-localised.json",
+                  "{CONTENT_TYPE_BASEPATH}/advanced-banner.json",
+                  "{CONTENT_TYPE_BASEPATH}/blog-post.json",
+                  "{CONTENT_TYPE_BASEPATH}/blog-list.json",
+                  "{CONTENT_TYPE_BASEPATH}/card.json",
+                  "{CONTENT_TYPE_BASEPATH}/card-list.json",
+                  "{CONTENT_TYPE_BASEPATH}/curated-product-list.json",
+                  "{CONTENT_TYPE_BASEPATH}/external-block.json",
+                  "{CONTENT_TYPE_BASEPATH}/promo-list.json",
+                  "{CONTENT_TYPE_BASEPATH}/slider.json",
+                  "{CONTENT_TYPE_BASEPATH}/split-block.json",
+                  "{CONTENT_TYPE_BASEPATH}/text.json",
+                  "{CONTENT_TYPE_BASEPATH}/rich-text.json",
+                  "{CONTENT_TYPE_BASEPATH}/video.json"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

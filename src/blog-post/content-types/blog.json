@@ -1,14 +1,14 @@
 {
-    "contentTypeUri": "{CONTENT_TYPE_BASEPATH}/blog-list.json",
+    "contentTypeUri": "{CONTENT_TYPE_BASEPATH}/blog.json",
     "settings": {
-      "label": "Blog List",
+      "label": "Blog",
       "visualizations": [
         {VISUALIZATIONS}
       ],
       "icons": [
         {
           "size": 256,
-          "url": "https://bigcontent.io/cms/icons/potter/potter-blog-list.png"
+          "url": "https://bigcontent.io/cms/icons/potter/potter-blog.png"
         }
       ],
       "cards": [
