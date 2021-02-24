@@ -8,13 +8,13 @@
       "default": true
     },
     {
-      "label": "JSON (CDV2)",
-      "templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/dc-visualization-content-delivery/index.html?vse={{vse.domain}}&id={{content.sys.id}}&format=inlined&depth=all&v2=true&locale={{locales}}",
+      "label": "Standalone",
+      "templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/accelerators/christ_poc/templates/amp-template-visualization.html?&cid={{content.sys.id}}&vse={{vse.domain}}&{{locales}},en-*,*",
       "default": false
     },
     {
-      "label": "JSON (CDV1)",
-      "templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/dc-visualization-content-delivery/index.html?vse={{vse.domain}}&id={{content.sys.id}}&format=inlined&depth=all&v2=false&locale={{locales}}",
+      "label": "JSON",
+      "templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/dc-visualization-content-delivery/index.html?vse={{vse.domain}}&id={{content.sys.id}}&format=inlined&depth=all&v2=true&locale={{locales}}",
       "default": false
     }
   ]
