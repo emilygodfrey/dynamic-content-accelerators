@@ -2,24 +2,24 @@
     {{#each content}}
     <div class="amp-dc-split-part{{#if ../split}} amp-dc-size-{{itemAt (split ../split "/") @index}}{{else}} amp-dc-size-50{{/if}}">
         <div class="amp-dc-split-part-wrap">
-            {{#if (test this.[@type] (toRegex ".*/text")) ~}}
+            {{#if (test this._meta.schema (toRegex ".*/text")) ~}}
             {{> amp-template-text }}
             {{~/if}}
 
-            {{#if (test this.[@type] (toRegex ".*/video")) ~}}
+            {{#if (test this._meta.schema (toRegex ".*/video")) ~}}
             {{> amp-card-template-video }}
             {{~/if}}
 
-            {{#if (test this.[@type] (toRegex ".*/image")) ~}}
+            {{#if (test this._meta.schema (toRegex ".*/image")) ~}}
             <div class="amp-dc-poi-image">
                 {{> amp-card-template-image this}}
             </div>
             {{~/if}}
-            {{#if (test this.[@type] (toRegex ".*/advanced-banner.json")) ~}}
+            {{#if (test this._meta.schema (toRegex ".*/advanced-banner.json")) ~}}
             {{> amp-template-advanced-banner }}
             {{~/if}}
 
-            {{#if (test this.[@type] (toRegex ".*/simple-image-banner.json")) ~}}
+            {{#if (test this._meta.schema (toRegex ".*/simple-image-banner.json")) ~}}
             {{> amp-template-simple-image-banner }}
             {{~/if}}
         </div>

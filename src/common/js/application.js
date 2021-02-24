@@ -183,13 +183,27 @@
   loadContent(menukey, 'amp-menu-holder');
   loadContent(key, 'amp-page-content-holder');
 
-  function evaluateAmplienceLink(lnk) {
+  function changeLinkByType(lnk, lnktype){
+    if(lnktype == "page") return lnk.replace("amp-template-blog-landing", "amp-template-preview")
+    if(lnktype == "bloglanding") return lnk.replace("amp-template-preview", "amp-template-blog-landing")
+  }
+
+  function evaluateAmplienceLink(lnk, lnktype) {
+    if(!lnktype) lnktype = 'page';
     console.log('link clicked = ' + lnk);
     if (lnk.indexOf('https://') >= 0) {
       // check if there are any paramaters
       var currenturl = window.location.href;
 
-      if(timestamp){
+      if(lnk.indexOf('amp-template-blog-landing') >= 0){
+        if(vse){
+          lnk += '?vse=' + vse + '&locale=' + locale;
+          window.open(lnk, '_self');
+          return;
+        }
+      }
+
+      if(vse){
         lnk = lnk.replace("{{vse.domain}}", vse);
         lnk = lnk.replace("{{locales}}", locale);
         lnk = lnk.replace("{{timestamp}}", timestamp);
@@ -203,6 +217,7 @@
             }
           }
         }
+        lnk = changeLinkByType(lnk, lnktype);
         window.open(lnk, '_self');
       }else{
         // We want the key and the locales....
@@ -226,6 +241,7 @@
         if(newkey){
           lnk += newkey;
         }
+        lnk = changeLinkByType(lnk, lnktype);
         window.open(lnk, '_self');
 
       }
@@ -243,11 +259,14 @@
           }
         }
         var newurl = urlarr.join('&');
+        newurl = changeLinkByType(newurl, lnktype);
         window.open(newurl, '_self');
       } else {
         if (currenturl.indexOf('?') >= 0) {
+          currenturl = changeLinkByType(currenturl, lnktype);
           window.open(currenturl + '&key=' + lnk, '_self');
         } else {
+          currenturl = changeLinkByType(currenturl, lnktype);
           window.open(currenturl + '?key=' + lnk, '_self');
         }
       }

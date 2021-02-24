@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Amplience Accelerators - Preview</title>
+    <!-- Optional to load in content to the page, You can use your own JS if you like with the direct access to the HTML in your index (ampURLHTML) or our SDK with Example -->
+    <script src="https://unpkg.com/dc-delivery-sdk-js/dist/dynamicContent.browser.umd.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{DEPLOY_PATH}styles.min.css" />
+    <script src="{DEPLOY_PATH}utils.min.js"></script>
+    <script src="{DEPLOY_PATH}lory.min.js"></script>
+    <style>
+      .blog-list {
+          display: flex;
+          flex-direction: row;
+          padding: 2rem;
+      }
+  
+      @media (max-width: 770px) {
+           .blog-list {
+              flex-direction: column;
+          }
+      }
+  
+      .blog-list-facets {
+          flex: 0.2;
+          display: flex;
+          flex-direction: column;
+      }
+  
+      .blog-list-facets h2 {
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: 700;
+          line-height: 1em;
+          color: #000000;
+          font-size: 30px;
+          margin-top: 20px;
+      }
+  
+      .blog-list-results {
+          flex: 0.8;
+      }
+  
+      .ais-Hits-item {
+          margin-top: unset !important;
+          margin-left: unset !important;
+          padding: unset !important;
+          //width: unset !important;
+          border: unset !important;
+          -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+      }
+  
+      .ais-SearchBox {
+          padding-right: 10px;
+      }
+  
+      #pagination {
+          margin: 10px;
+      }
+  </style>
+  </head>
+  <body>
+    <div id="amp-debug-container"></div>
+    <div class="amp-header-container"></div>
+    <div id="amp-menu-holder"></div>
+    <div class="blog-list">
+
+      <div class="blog-list-facets">
+          <div id="searchbox" class="ais-SearchBox"></div>
+  
+          <h2>Category</h2>
+          <div id="category-list"></div>
+  
+          <h2>Author</h2>
+          <div id="author-list"></div>
+  
+          <div id="hits-per-page" style="display: none;"></div>
+      </div>
+  
+      <div class="blog-list-results">
+          <div class="amp-dc-card-list amp-dc-prod-3-rows amp-dc-cards-hero">
+              <div id="hits"></div>
+          </div>
+          <div id="pagination"></div>
+      </div>
+  
+  </div>
+
+
+    <div id="amp-page-footer-holder" data-amp-deliverykey="web/home/footer" style="width: 100%;"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia.css"></link>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.32.0/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
+    <script>
+      /* global instantsearch algoliasearch */
+  
+      var vse = window.AmpCa.Utils.getUrlParameter('vse');
+
+      const newsearch = instantsearch({
+          indexName: vse ? 'Christ-POC.christ-blog-posts-staging':'Christ-POC.christ-blog-posts',
+          searchClient: algoliasearch('4BS5I6EVVD', '425850c8f493a1b537da418e5f542cfd'),
+          hitsPerPage: 5
+      });
+  
+      newsearch.addWidget(
+          instantsearch.widgets.searchBox({
+              container: '#searchbox',
+          })
+      );
+  
+      newsearch.addWidget(
+          instantsearch.widgets.refinementList({
+              container: '#category-list',
+              attribute: 'snippet.category',
+          })
+      );
+  
+      newsearch.addWidget(
+          instantsearch.widgets.refinementList({
+              container: '#author-list',
+              attribute: 'snippet.author',
+          })
+      );
+  
+      newsearch.addWidget(
+          instantsearch.widgets.hits({
+              hitsPerPage: 5,
+              container: '#hits',
+              cssClasses: {
+                  list: 'amp-dc-card-list-wrap',
+                  item: 'amp-dc-card'
+              },
+              templates: {
+                  item: ({ snippet, _meta }) => {
+                      return `
+                              <a class="amp-dc-card-wrap" href="javascript:void(0);"
+                onclick="AmpCa.Utils.evaluateAmplienceLink('${_meta.deliveryKey}', 'page');">
+                                  <div class="amp-dc-card-img-wrap">
+                                      <picture class="amp-dc-image">
+                                         <img src="https://${snippet.image.imageholder.image.image.defaultHost}/i/${snippet.image.imageholder.image.image.endpoint}/${snippet.image.imageholder.image.image.name}?w=1000&upscale=false&aspect=1:2&sm=aspect&$poi$&qlt=75" class="amp-dc-image-pic" alt="${snippet.title}">
+                                      </picture>
+                                  </div>
+                                  <div class="amp-dc-card-text-wrap">
+                                      <div class="amp-dc-card-name">${snippet.title}</div>
+                                      <p class="amp-dc-card-description">${snippet.blogdate}</p>
+                                  </div>
+                              </a>
+                      `;
+                  },
+              },
+          })
+      );
+  
+      newsearch.addWidget(
+          instantsearch.widgets.pagination({
+              container: '#pagination',
+          })
+      );
+  
+      newsearch.addWidget(
+          instantsearch.widgets.hitsPerPage({
+              container: '#hits-per-page',
+              items: [
+                  { label: '5 hits per page', value: 5, default: true },
+                  { label: '10 hits per page', value: 10 },
+              ],
+          }));
+  
+          newsearch.start();
+  
+  </script>
+  
+  </body>
+</html>

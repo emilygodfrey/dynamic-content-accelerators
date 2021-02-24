@@ -1,32 +1,32 @@
-{{#if (test this.[@type] (toRegex ".*/text")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/text")) ~}}
 {{> amp-template-text }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/title")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/title")) ~}}
 {{> amp-template-title }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/video")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/video")) ~}}
 {{> amp-card-template-video }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/promo-list")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/promo-list")) ~}}
 {{> amp-template-promo-list }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/promo.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/promo.json")) ~}}
 {{> amp-template-promo }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/split-block")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/split-block")) ~}}
 {{> amp-card-template-split-block }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/slider")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/slider")) ~}}
 {{> amp-card-template-slider }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/image")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/image")) ~}}
 {{> amp-card-template-image this}}
 {{~/if}}
 
@@ -34,75 +34,75 @@
 {{> amp-card-template-image this.[0]}}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/external-block")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/external-block")) ~}}
 {{> amp-template-external-block }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/card-list")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/card-list")) ~}}
 {{> amp-card-template-card-list }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/card.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/card.json")) ~}}
 {{> amp-card-template-card }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/blog-post")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/blog-post")) ~}}
 {{> amp-card-template-blog-post }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/blog-list.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/blog-list.json")) ~}}
 {{> amp-template-blog-list }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/banner")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/banner")) ~}}
 {{> amp-card-template-banner }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/advanced-banner")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/advanced-banner")) ~}}
 {{> amp-template-advanced-banner }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/simple-image-banner-localised.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/simple-image-banner-localised.json")) ~}}
 {{> amp-template-simple-image-banner-localised }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/simple-image-banner.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/simple-image-banner.json")) ~}}
 {{> amp-template-simple-image-banner }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/page")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/page")) ~}}
 {{> amp-card-template-page }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/navigation.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/navigation.json")) ~}}
 {{> amp-template-navigation }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/rich-text.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/rich-text.json")) ~}}
 {{> amp-template-rich-text }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/curated-product-list.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/curated-product-list.json")) ~}}
 {{> amp-template-curated-product-list }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/collection.json")) ~}} {{> amp-template-collection }} {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/collection-block.json")) ~}} {{> amp-template-collection-block }} {{~/if}}
+{{#if (test this._meta.schema (toRegex ".*/collection.json")) ~}} {{> amp-template-collection }} {{~/if}}
+{{#if (test this._meta.schema (toRegex ".*/collection-block.json")) ~}} {{> amp-template-collection-block }} {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/slot.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/slot.json")) ~}}
     {{#each this.content}}
         {{> templateChooser this }}
     {{/each}}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/localised-slot.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/localised-slot.json")) ~}}
     {{#each this.content}}
         {{> templateChooser this }}
     {{/each}}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/navigation-slot.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/navigation-slot.json")) ~}}
     {{> templateChooser navigation }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/localised-navigation-slot.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/localised-navigation-slot.json")) ~}}
     {{> templateChooser navigation }}
 {{~/if}}

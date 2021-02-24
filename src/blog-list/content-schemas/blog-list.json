@@ -20,13 +20,6 @@
         "maxLength": 50,
         "title": "Header"
       },
-      "indexName": {
-        "type": "string",
-        "minLength": 0,
-        "maxLength": 50,
-        "title": "Index Name",
-        "description":"The name of the search index for your blog posts"
-      },
       "query": {
         "type": "string",
         "minLength": 0,
@@ -44,7 +37,6 @@
     },
     "propertyOrder": [
       "header",
-      "indexName",
       "query",
       "numItems",
       "component"

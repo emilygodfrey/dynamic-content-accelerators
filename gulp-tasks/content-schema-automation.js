@@ -27,13 +27,13 @@ gulp.task('import-dc-content-type-schemas', function (cb) {
   console.log('Importing Content Schemas');
   var importschemas = exec(
     'dc-cli content-type-schema import dist/content-type-schemas',
-    (error, stdout, stderr) => {
+    (error, stdout) => {
       if (error) {
         console.log('ERROR IN SCHEMAS');
         throw error;
       }
       console.log('no error');
-      console.log(stdout);
+      console.log(stdout, error);
       cb();
     }
   );

@@ -3,7 +3,12 @@
     "settings": {
       "label": "Blog",
       "visualizations": [
-        {VISUALIZATIONS}
+        {VISUALIZATIONS},
+        {
+          "label": "Blog Landing",
+          "templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/accelerators/christ_poc/templates/amp-template-blog-landing.html?vse={{vse.domain}}&cid={{content.sys.id}}&locale={{locales}}",
+          "default": false
+        }
       ],
       "icons": [
         {

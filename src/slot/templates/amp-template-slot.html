@@ -1,4 +1,4 @@
-{{#if (test this.[@type] (toRegex ".*/slot.json")) ~}}
+{{#if (test this._meta.schema (toRegex ".*/slot.json")) ~}}
     {{#each this.content}}
         {{> templateChooser this }}
     {{/each}}

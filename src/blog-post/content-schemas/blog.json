@@ -10,6 +10,19 @@
   ],
   "type": "object",
   "properties": {
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "deliveryKey": {
+          "type": "string",
+          "title": "Delivery key",
+          "description": "Enter the delivery key for this item"
+        }
+      },
+      "required": [
+        "deliveryKey"
+      ]
+    },
     "snippet": {
       "type": "object",
       "title": "Blog Snippet",
