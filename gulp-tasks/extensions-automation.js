@@ -144,10 +144,8 @@ gulp.task('deploy-extensions-dc', function (cb) {
           request.patch(
             {
               url:
-                config.amplience["dynamic-content"]['api-url'] +
-                '/hubs/' +
-                config.amplience["dynamic-content"]['dc-hub-id'] +
-                '/extensions/' +
+                config.amplience["dynamic-content"]['api-url'] 
+                 + '/extensions/' +
                 match['id'],
 
               headers: {
@@ -164,10 +162,8 @@ gulp.task('deploy-extensions-dc', function (cb) {
                 });
               }
               console.log(body);
-              console.log(config.amplience["dynamic-content"]['api-url'] +
-              '/hubs/' +
-              config.amplience["dynamic-content"]['dc-hub-id'] +
-              '/extensions/' +
+              console.log(config.amplience["dynamic-content"]['api-url']
+              + '/extensions/' +
               match['id'])
               console.log(JSON.stringify(mergedJSON));
               //console.log(error);
