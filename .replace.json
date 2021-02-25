@@ -9,7 +9,7 @@
     },
     {
       "label": "Standalone",
-      "templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/accelerators/christ_poc/templates/amp-template-visualization.html?&cid={{content.sys.id}}&vse={{vse.domain}}&{{locales}},en-*,*",
+      "templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/accelerators/christ_poc/templates/amp-template-visualization-standalone.html?&cid={{content.sys.id}}&vse={{vse.domain}}&{{locales}},en-*,*",
       "default": false
     },
     {

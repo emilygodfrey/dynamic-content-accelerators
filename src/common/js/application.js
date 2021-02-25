@@ -39,6 +39,21 @@
   }
   function loadDynamicSlots(){
     var slots = document.querySelectorAll('[data-amp-deliverykey]');
+    // Check is there is a div which requires loading from the visualisation
+    var vizslots = document.querySelectorAll('[data-amp-visualisation-param-loader]');
+    // if there is a viz slot, then we need to load from the params in the URL: vse, locale, cid and maybe template for email unless done differently
+    vizslots.forEach(function (item) {
+      var eID = item.id;
+      // if there is a key for viz......
+      var vizkey = getUrlParameter('key');
+      if( vizkey){
+        loadContent(vizkey, eID, 'key');
+      } else{
+        loadContent(cid, eID, 'id');
+      }
+    });
+
+
     slots.forEach(function (item) {
       var dynamickey = item.getAttribute('data-amp-deliverykey');
       var eID = item.id;
@@ -132,13 +147,8 @@
   var clientV1 = new ampDynamicContent.ContentClient(AmpSDKObjCRS);
   var clientV2 = new ampDynamicContent.ContentClient(AmpSDKObj);
 
-
-  function loadContent(key, container) {
-    console.log('asked to load!', key);
-    clientV2
-      .getContentItemByKey(key)
-      .then((content) => {
-        console.log(content.body);
+  function handleLoadedContent(container, content){
+    console.log(content.body);
         var renderID  = content.body._meta.deliveryId;
         if(content && content.body){
           var schema = content.body._meta.schema;
@@ -167,17 +177,46 @@
             console.log(response.body);
             document.getElementById(container).innerHTML = response.body;
 
+            // remove loader
+            var loader = document.getElementById('amp-content-loader')
+            if (loader){
+              loader.style.display = 'none';
+            }
+
             AmpCa.Utils.attachComponents()
             AmpCa.Utils.findSearches()
             AmpCa.Utils.findProducts()
+
           })
           .catch(error => {
             console.log('unable to find content', error);
           });
+
+  }
+
+
+  function loadContent(key, container, method) {
+    console.log('asked to load!', key);
+
+    if( method == 'id'){
+      clientV2
+      .getContentItemById(key)
+      .then((content) => {
+        handleLoadedContent(container, content);
       })
       .catch((error) => {
         console.log('content not found', error);
       });
+    } else {
+      clientV2
+      .getContentItemByKey(key)
+      .then((content) => {
+        handleLoadedContent(container, content);
+      })
+      .catch((error) => {
+        console.log('content not found', error);
+      });
+    }
   }
 
   loadContent(menukey, 'amp-menu-holder');
