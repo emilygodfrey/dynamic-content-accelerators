@@ -45,7 +45,8 @@
                   "{CONTENT_TYPE_BASEPATH}/title.json",
                   "{CONTENT_TYPE_BASEPATH}/curated-product-list.json",
                   "{CONTENT_TYPE_BASEPATH}/video.json",
-                  "{CONTENT_TYPE_BASEPATH}/map.json"
+                  "{CONTENT_TYPE_BASEPATH}/map.json",
+                  "{CONTENT_TYPE_BASEPATH}/blog-list.json"
                 ]
               }
             }
