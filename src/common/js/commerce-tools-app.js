@@ -61,13 +61,11 @@
             var name = data.name['{CT_LOCALE}'];
             var priceObj = data.masterVariant.prices[0].value;
             var price =
-              '&dollar;' +
-              (priceObj.centAmount * 0.1).toFixed(priceObj.fractionDigits);
+              '&euro;' +
+              (priceObj.centAmount * 0.01).toFixed(priceObj.fractionDigits);
 
             var html =
-              '<a class="o-dc-card card-bg  card2" href="' +
-              link +
-              '"><div class="amp-dc-card-wrap"><div class="o-dc-card-img"><picture class="amp-dc-image"><img src="' +
+              '<a class="o-dc-card card-bg  card2" href=""><div class="amp-dc-card-wrap"><div class="o-dc-card-img"><picture class="amp-dc-image"><img src="' +
               image +
               '?$product-list$" class="amp-dc-image-pic"/></picture></div><div class="o-dc-card-text"><h4 class="o-dc-card-title">' +
               name +

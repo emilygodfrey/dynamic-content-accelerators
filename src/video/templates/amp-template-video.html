@@ -1,7 +1,7 @@
 {{#if addYoutube}}
 <div class="o-dc-video-iframe" {{#if backgroundFullScreen}}style="z-index:-99"{{/if}}>
   <iframe
-    src="{{addYoutube}}?{{#if backgroundFullScreen}}&autoplay=1{{/if}}{{#if backgroundFullScreen}}&controls=0{{/if}}"
+    src="{{addYoutube}}?{{#if backgroundFullScreen}}&autoplay=1{{/if}}{{#if backgroundFullScreen}}&controls=1{{/if}}"
     frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
@@ -21,7 +21,7 @@
     loop="loop"
     src="//{{amplienceVideo.defaultHost}}/v/{{amplienceVideo.endpoint}}/{{amplienceVideo.name}}/mp4_720p?protocol=https"
   >
-    {{else}} 
+    {{else}}
     <video class="amp-dc-video"
     poster="//miguel.a.bigcontent.io/v1/static/video-transparent"
     style="background-image: url('//{{#if
