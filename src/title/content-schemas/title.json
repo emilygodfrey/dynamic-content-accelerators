@@ -13,11 +13,10 @@
   "type": "object",
   "properties": {
     "header": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 100,
-      "title": "Header",
-      "description": "Add header text"
+      "description": "Add header text",
+      "allOf": [
+        { "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string" }
+      ]
     },
     "headerStyle": {
       "title": "Header Colour",
@@ -44,11 +43,10 @@
       "type": "string"
     },
     "description": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 250,
-      "title": "Description",
-      "description": "Add description text"
+      "description": "Add description text",
+      "allOf": [
+        { "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string" }
+      ]
     },
     "descriptionStyle": {
       "title": "Description Style",
@@ -105,4 +103,3 @@
     "button"
   ]
 }
-

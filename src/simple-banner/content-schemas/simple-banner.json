@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "{CONTENT_TYPE_BASEPATH}/simple-banner.json",
+  "title": "Simple Banner",
+  "description": "Simple Banner accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "bannerImage",
+    "Header",
+    "Subheader",
+    "Description",
+    "button",
+    "backgroundGradient"
+  ],
+  "type": "object",
+  "properties": {
+    "bannerImage": {
+      "title": "Banner Image",
+      "description": "Select or create an image content",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/simple-banner-image.json"
+        }
+      ]
+    },
+
+    "textPositionHorizontal": {
+      "type": "string",
+      "enum": ["left", "center", "right"],
+      "title": "Horizontal text position",
+      "description": "Select a position"
+    },
+    "textPositionVertical": {
+      "type": "string",
+      "enum": ["top", "middle", "bottom"],
+      "title": "Vertical text position",
+      "description": "Select a position"
+    },
+    "button": {
+      "title": "Button",
+      "description": "Add a button",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/simple-button.json"
+        }
+      ]
+    },
+    "backgroundGradient": {
+      "title": "Background gradient",
+      "description": "Add a gradient behind the text?",
+      "type": "string",
+      "enum": ["left", "right", "top", "bottom", "full"]
+    },
+    "Subheader": {
+      "title": "Subheader",
+      "type": "object",
+      "properties": {
+        "subheaderloc": {
+      "title": "Subheader",
+      "description": "Add subheader text",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "subheaderStyle": {
+      "title": "Subheader Colour",
+      "description": "Specify a style",
+      "type": "string",
+      "enum": ["black", "white"]
+    },
+    "subheaderFontColour": {
+      "title": "Subheader Font Color",
+      "type": "string",
+      "format": "color"
+    },
+    "subheaderFontSize": {
+      "title": "Subheader Font Size",
+      "description": "Specify a font size",
+      "type": "string",
+      "enum": ["small", "medium", "large"]
+    },
+    "subheaderFontWeight": {
+      "title": "Subheader Font Weight",
+      "description": "Specify a font weight",
+      "type": "string",
+      "enum": ["normal", "bold"]
+    }
+      },
+      "propertyOrder": []
+    },
+    "Header": {
+      "title": "Header",
+      "type": "object",
+      "properties": {
+        "headerloc": {
+      "title": "Header",
+      "description": "Add header text",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "headerFontSize": {
+      "title": "Header Font Size",
+      "description": "Specify a font size",
+      "type": "string",
+      "enum": ["small", "medium", "large"]
+    },
+    "headerFontWeight": {
+      "title": "Header Font Weight",
+      "description": "Specify a font weight",
+      "type": "string",
+      "enum": ["normal", "bold"]
+    },
+    "headerFontColour": {
+      "title": "Header Font Color",
+      "type": "string",
+      "format": "color"
+    }
+      },
+      "propertyOrder": []
+    },
+    "Description": {
+      "title": "Description",
+      "type": "object",
+      "properties": {
+
+    "descriptionloc": {
+      "title": "Description",
+      "description": "Add description text",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "descriptionFontSize": {
+      "title": "Description Font Size",
+      "description": "Specify a font size",
+      "type": "string",
+      "enum": ["small", "medium", "large"]
+    },
+    "descriptionFontWeight": {
+      "title": "Description Font Weight",
+      "description": "Specify a font weight",
+      "type": "string",
+      "enum": ["normal", "bold"]
+    },
+    "descriptionStyle": {
+      "title": "Description Colour",
+      "description": "Specify a style",
+      "type": "string",
+      "enum": ["black", "white"]
+    }
+      },
+      "propertyOrder": []
+    }
+  }
+}

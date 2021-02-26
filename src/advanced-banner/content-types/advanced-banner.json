@@ -1,7 +1,7 @@
 {
   "contentTypeUri": "{CONTENT_TYPE_BASEPATH}/advanced-banner.json",
   "settings": {
-    "label": "Advanced Banner",
+    "label": "Banner - Advanced",
     "visualizations": [
       {VISUALIZATIONS}
     ],

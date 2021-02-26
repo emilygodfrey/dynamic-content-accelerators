@@ -66,6 +66,10 @@
 {{> amp-template-advanced-banner }}
 {{~/if}}
 
+{{#if (test this._meta.schema (toRegex ".*/simple-banner.json")) ~}}
+{{> amp-template-advanced-banner }}
+{{~/if}}
+
 {{#if (test this._meta.schema (toRegex ".*/curated-product-list.json")) ~}}
 {{> amp-template-curated-product-list }}
 {{~/if}}

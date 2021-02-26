@@ -1,6 +1,6 @@
 {{#each text}}
 	{{#if (test type (toRegex "markdown")) ~}}
-	<div class="amp-dc-text" {{#if align}}style="text-align:{{align}}"{{/if}}>
+	<div class="amp-dc-text" {{#if ../align}}style="text-align:{{../align}}"{{/if}}>
 		{{{markdown this.data}}}
 	</div>
 	 {{~/if}}

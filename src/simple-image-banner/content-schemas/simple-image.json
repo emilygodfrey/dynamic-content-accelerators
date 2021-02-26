@@ -10,9 +10,6 @@
   ],
   "type": "object",
   "properties": {
-    "component": {
-      "type": "string",
-    },
     "image": {
       "title": "Image",
       "description": "Main Image",
@@ -39,12 +36,6 @@
         }
       ]
     },
-    "mobileimageref": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 1000,
-      "title": "Optional reference to an external Mobile Image"
-    },
     "seoText": {
       "type": "string",
       "minLength": 0,
@@ -52,14 +43,11 @@
       "title": "SEO text",
       "pattern": "^[/A-Za-z0-9+_-]+$",
       "description": "Enter only alphanumeric, _, -, +, / characters"
-    },
+    }
+  },
   "propertyOrder": [
     "image",
-    "imageref",
-    "gifImage",
-    "imageAltText",
     "seoText",
-    "mobileImage",
-    "mobileimageref"
+    "mobileImage"
   ]
 }

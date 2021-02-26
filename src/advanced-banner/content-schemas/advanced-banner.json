@@ -14,16 +14,19 @@
     "smallerheight",
     "showscrollarrow",
     "scrollarrowcolour",
+    "headerConstant",
     "headerloc",
     "headerStyle",
     "headerFontSize",
     "headerFontWeight",
     "headerFontColour",
+    "subheaderConstant",
     "subheaderloc",
     "subheaderStyle",
     "subheaderFontSize",
     "subheaderFontWeight",
     "subheaderFontColour",
+    "descriptionConstant",
     "descriptionloc",
     "descriptionStyle",
     "descriptionFontSize",
@@ -56,6 +59,12 @@
           "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
         }
       ]
+    },
+    "subheaderConstant":{
+      "title":"",
+      "description":"",
+      "type":"string",
+      "const":"Add subheader text below"
     },
     "subheaderloc": {
       "title": "Subheader",
@@ -92,6 +101,12 @@
       "type": "string",
       "enum": ["normal", "bold"]
     },
+    "headerConstant":{
+      "title":"",
+      "description":"",
+      "type":"string",
+      "const":"Add header text below"
+    },
     "headerloc": {
       "title": "Header",
       "description": "Add header text",
@@ -120,6 +135,12 @@
       "title": "Header Font Color",
       "type": "string",
       "format": "color"
+    },
+    "descriptionConstant":{
+      "title":"",
+      "description":"",
+      "type":"string",
+      "const":"Add description text below"
     },
     "descriptionloc": {
       "title": "Description",

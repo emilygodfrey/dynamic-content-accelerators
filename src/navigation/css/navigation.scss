@@ -6,12 +6,12 @@
     font-size: 12.8px;
     text-transform: uppercase;
   }
-  
+
   .af-banner {
     display: flex;
     flex-direction: row;
     padding: 10px 58px;
-    
+
     &__logo {
       flex-grow: 1;
     }
@@ -28,17 +28,17 @@
         width: 30px;
       }
     }
-  
+
     @media (max-width: 500px) {
       &__account-cart-total {
         display: none;
       }
-  
-  
+
+
       padding: 10px 20px 10px 20px;
     }
   }
-  
+
   .af-navigation {
     font-size: 0;
     position: relative;
@@ -46,15 +46,15 @@
     border-top: 1px solid #d5d5d5;;
     padding: 0px 45px;
     font-family: 'Avenir Next','Helvetica Neue','Helvetica','Arial', 'Roboto', sans-serif;
-  
+
     &.navbar-light .navbar-nav .nav-link {
       color:black;
     }
-  
+
     .nav-link{
       padding:0;
     }
-  
+
     .dropdown-menu{
       margin-top:0;
     }
@@ -83,7 +83,7 @@
               padding-bottom: 7px;
             }
         }
-        
+
         display: inline-block;
         font-size: 14px;
         position: relative;
@@ -95,10 +95,10 @@
           position: relative;
           border-bottom: 3px solid transparent;
         }
-        
+
       }
     }
-  
+
     &__mega-menu {
       padding: 30px;
       background: #ffffff;;
@@ -130,9 +130,9 @@
         }
       }
     }
-  
+
     &__panel {
-  
+
       @media (min-width: 1920px) {
         .af-navigation-panel-container{
           max-width:80%;
@@ -143,12 +143,12 @@
           max-width:70%;
         }
       }
-  
+
       @media (min-width: 768px) {
         .af-navigation-panel-container{
           max-width:60%;
         }
-  
+
         .amp-dc-banner {
           padding-bottom: 22% !important;
         }
@@ -165,7 +165,7 @@
           }
         }
       }
-  
+
       &:before {
         content: " ";
         display: table;
@@ -175,9 +175,9 @@
         display: table;
         clear: both;
       }
-  
-  
-  
+
+
+
       @media (min-width: 768px) {
         .amp-dc-banner-info-wrap {
           height:100% !important;
@@ -188,7 +188,7 @@
           color:white;
           text-shadow: 0 2px 16px rgba(0,0,0,.75);
         }
-  
+
         .amp-dc-banner-subheader{
           font-size: 14px;
           color:white;
@@ -199,13 +199,13 @@
           font-size: 16px !important;
         }
       }
-  
+
       .amp-dc-banner-info-wrap {
         width: 40%;
         .amp-dc-banner-info {
           padding: 0px;
         }
-  
+
       }
     }
     @media (max-width: 768px) {
@@ -214,13 +214,13 @@
       }
     }
   }
-  
+
     @media (min-width: 768px) {
       .af-navigation__mega-menu{
         box-shadow: 0 4px 2px -2px gray;
       }
     }
-  
+
   @media (max-width: 768px) {
     .af-navigation {
       border-bottom: none;

@@ -1,7 +1,7 @@
 {
-  "contentTypeUri": "{CONTENT_TYPE_BASEPATH}/simple-image-banner.json",
+  "contentTypeUri": "{CONTENT_TYPE_BASEPATH}/simple-banner.json",
   "settings": {
-    "label": "Banner - Image",
+    "label": "Banner - Simple",
     "visualizations": [
       {VISUALIZATIONS}
     ],

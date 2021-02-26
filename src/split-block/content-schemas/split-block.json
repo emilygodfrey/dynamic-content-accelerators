@@ -30,8 +30,8 @@
                   "{CONTENT_TYPE_BASEPATH}/card.json",
                   "{CONTENT_TYPE_BASEPATH}/rich-text.json",
                   "{CONTENT_TYPE_BASEPATH}/advanced-banner.json",
+                  "{CONTENT_TYPE_BASEPATH}/simple-banner.json",
                   "{CONTENT_TYPE_BASEPATH}/simple-image-banner.json"
-
                 ]
               }
             }

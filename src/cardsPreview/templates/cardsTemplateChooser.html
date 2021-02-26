@@ -50,6 +50,10 @@
 {{> amp-card-template-blog-post }}
 {{~/if}}
 
+{{#if (test this._meta.schema (toRegex ".*/blog.json")) ~}}
+{{> amp-card-template-blog-post }}
+{{~/if}}
+
 {{#if (test this._meta.schema (toRegex ".*/blog-list.json")) ~}}
 {{> amp-template-blog-list }}
 {{~/if}}
@@ -59,6 +63,10 @@
 {{~/if}}
 
 {{#if (test this._meta.schema (toRegex ".*/advanced-banner")) ~}}
+{{> amp-template-advanced-banner }}
+{{~/if}}
+
+{{#if (test this._meta.schema (toRegex ".*/simple-banner")) ~}}
 {{> amp-template-advanced-banner }}
 {{~/if}}
 

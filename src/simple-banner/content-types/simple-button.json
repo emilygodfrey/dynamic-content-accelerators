@@ -1,7 +1,7 @@
 {
-  "contentTypeUri": "{CONTENT_TYPE_BASEPATH}/simple-image-banner.json",
+  "contentTypeUri": "{CONTENT_TYPE_BASEPATH}/simple-button.json",
   "settings": {
-    "label": "Banner - Image",
+    "label": "Simple Button",
     "visualizations": [
       {VISUALIZATIONS}
     ],
@@ -17,5 +17,5 @@
       }
     ]
   },
-  "repositories": ["content"]
+  "repositories": []
 }
