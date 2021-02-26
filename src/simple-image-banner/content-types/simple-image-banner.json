@@ -17,5 +17,5 @@
       }
     ]
   },
-  "repositories": []
+  "repositories": ["content"]
 }

@@ -23,7 +23,7 @@
           "description": "The delivery key is used as the URL slug"
         }
       }
-    }, 
+    },
     "bannerImage": {
       "description": "",
       "type": "object",
@@ -38,13 +38,6 @@
       "title": "Link",
       "type": "string",
       "description": "Link for this banner",
-      "minLength": 0,
-      "maxLength": 2000
-    },
-    "analytics": {
-      "title": "Analytics Label",
-      "type": "string",
-      "description": "Analytics Label for this banner",
       "minLength": 0,
       "maxLength": 2000
     }

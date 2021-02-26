@@ -2,8 +2,8 @@
     {{#each content}}
     <div class="amp-dc-split-part{{#if ../split}} amp-dc-size-{{itemAt (split ../split "/") @index}}{{else}} amp-dc-size-50{{/if}}">
         <div class="amp-dc-split-part-wrap">
-            {{#if (test this._meta.schema (toRegex ".*/text")) ~}}
-            {{> amp-template-text }}
+            {{#if (test this._meta.schema (toRegex ".*/rich-text")) ~}}
+            {{> amp-template-rich-text }}
             {{~/if}}
 
             {{#if (test this._meta.schema (toRegex ".*/video")) ~}}
@@ -19,8 +19,12 @@
             {{> amp-template-advanced-banner }}
             {{~/if}}
 
-            {{#if (test this._meta.schema (toRegex ".*/simple-image-banner.json")) ~}}
-            {{> amp-template-simple-image-banner }}
+            {{#if (test this._meta.schema (toRegex ".*/simple-image-banner-localised.json")) ~}}
+            {{> amp-template-simple-image-banner-loclaised }}
+            {{~/if}}
+
+            {{#if (test this._meta.schema (toRegex ".*/card")) ~}}
+            {{> amp-template-card }}
             {{~/if}}
 
         </div>

@@ -12,7 +12,6 @@
   "properties": {
     "component": {
       "type": "string",
-      "const": "SimpleImage"
     },
     "image": {
       "title": "Image",
@@ -30,12 +29,6 @@
         }
       }
     },
-    "imageref": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 1000,
-      "title": "Optional reference to an external Main Image"
-    },
     "mobileImage": {
       "title": "Mobile Image (Optional)",
       "description": "Optional Mobile version of image to show. Will show the main image if not set",
@@ -52,12 +45,6 @@
       "maxLength": 1000,
       "title": "Optional reference to an external Mobile Image"
     },
-    "imageAltText": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 150,
-      "title": "Image alt text"
-    },
     "seoText": {
       "type": "string",
       "minLength": 0,
@@ -66,12 +53,6 @@
       "pattern": "^[/A-Za-z0-9+_-]+$",
       "description": "Enter only alphanumeric, _, -, +, / characters"
     },
-    "gifImage": {
-      "title": "Animated Gif Image",
-      "description": "Is the image an Animated gif?",
-      "type": "boolean"
-    }
-  },
   "propertyOrder": [
     "image",
     "imageref",

@@ -45,7 +45,17 @@
           }
         }
       }
+    },
+    "align": {
+      "title": "Horizontal align",
+      "description": "Horizontal text align",
+      "type": "string",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
     }
   },
-  "propertyOrder": ["text", "component"]
+  "propertyOrder": ["text", "align", "valign", "component"]
 }
