@@ -10,20 +10,6 @@
   ],
   "type": "object",
   "properties": {
-    "component": {
-      "type": "string",
-      "const": "SimpleImageBanner"
-    },
-    "_meta":{
-      "type":"object",
-      "properties":{
-        "deliveryKey":{
-          "type":"string",
-          "title":"Delivery key",
-          "description": "The delivery key is used as the URL slug"
-        }
-      }
-    },
     "bannerImage": {
       "description": "",
       "type": "object",
@@ -44,8 +30,6 @@
   },
   "propertyOrder": [
     "bannerImage",
-    "link",
-    "analytics",
-    "component"
+    "link"
   ]
 }
