@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "{CONTENT_TYPE_BASEPATH}/advanced-button.json",  
+    "title": "Advanced Button",
+    "description": "Add a button",
+  
+    "allOf": [
+      {
+        "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+      }
+    ],
+  
+    "type": "object",
+    "properties": {
+      "buttonLabel": {
+        "title": "Button Label",
+        "description": "Label for the button",
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 100
+      },
+      "buttonLink": {
+        "title": "Button Link",
+        "description": "Link for the button",
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 100
+      },
+      "buttonStyle": {
+        "title": "Button Style",
+        "description": "Style for the button",
+        "type": "string",
+        "enum": [
+          "black",
+          "white",
+          "hollow",
+          "tiny",
+          "small",
+          "large",
+          "expanded",
+          "primary",
+          "secondary"
+        ]
+      },
+      "buttonTransition":{
+        "title": "Button Transition",
+        "description": "Transition Effect",
+        "type": "string",
+        "enum": [
+          "hvr-grow",
+          "hvr-shrink",
+          "hvr-float",
+          "hvr-forward",
+          "hvr-fade",
+          "hvr-shutter-out-horizontal",
+          "hvr-shutter-out-vertical",
+          "hvr-icon-forward",
+          "hvr-icon-fade",
+          "hvr-trim",
+          "hvr-hollow",
+          "hvr-underline-reveal"
+        ]
+      },
+      "buttonFontWeight":{
+        "title": "Font Weight",
+        "description": "Specify a font weight",
+        "type": "string",
+        "enum": [
+          "normal",
+          "bold"
+        ]
+      },
+      "buttonBorderStyle": {
+        "title": "Button Border Style Override",
+        "description": "Choose a border style only if you wish to override default",
+        "type": "string",
+            "enum": [
+            "dotted",
+            "dashed",
+                "solid",
+                "double"
+        ]
+      },
+      "buttonBorderColour": {
+        "title": "Button Border Color Override",
+        "description": "Choose a text color only if you wish to override default",
+        "format": "color",
+        "type": "string"
+      },
+      "buttonBackgroundColour": {
+        "title": "Button Background Color Override",
+        "description": "Choose a background color only if you wish to override default",
+        "format": "color",
+        "type": "string"
+      },
+      "buttonForegroundColour": {
+        "title": "Button Text Color Override",
+        "description": "Choose a text color only if you wish to override default",
+        "format": "color",
+        "type": "string"
+      }
+    },
+    "propertyOrder": []
+  }

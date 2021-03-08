@@ -1,3 +1,15 @@
+.amp-dc-advanced-banner-mobile-info-wrap {
+@media screen and (max-width: 639px){
+    display: none;
+      }
+}
+.amp-dc-advanced-banner-mobile-info-wrap-mobil {
+@media screen and (min-width: 639px){
+    display: none;
+      }
+}
+
+
 .amp-dc-advanced-banner {
   position: relative;
   overflow: hidden;
@@ -20,7 +32,7 @@
     display: block;
   }
 
-  .amp-dc-advanced-banner-info-wrap {
+  .amp-dc-advanced-banner-mobile-info-wrap .amp-dc-advanced-banner-mobile-info-wrap-mobil {
     position: absolute;
     width: 100%;
     height: 100%;

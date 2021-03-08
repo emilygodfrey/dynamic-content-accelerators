@@ -1,0 +1,12 @@
+{{#if button.buttonLabel}}
+    <a
+    class="o-dc-button {{button.buttonStyle}} {{#if button.buttonFontWeight}}o-dc-text-{{button.buttonFontWeight}}{{/if}} {{button.buttonTransition}}{{#if button.buttonBackgroundColour}} inline-color {{/if}}"
+    style=" {{#if button.buttonBackgroundColour}}background:{{button.buttonBackgroundColour}};{{/if}}
+            {{#if button.buttonForegroundColour}}color:{{button.buttonForegroundColour}};{{/if}}
+            {{#if button.buttonBorderStyle}}border-style:{{button.buttonBorderStyle}};{{/if}}
+            {{#if button.buttonBorderColour}}border-color:{{button.buttonBorderColour}};{{/if}}"
+    data-amp-link="{{button.buttonLink}}"
+    href="javascript:void(0);"
+    onclick="AmpCa.Utils.evaluateAmplienceLink('{{button.buttonLink}}');">
+    {{button.buttonLabel}}</a>
+{{/if}}

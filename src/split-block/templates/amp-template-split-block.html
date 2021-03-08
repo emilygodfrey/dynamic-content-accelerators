@@ -23,6 +23,10 @@
             {{> amp-template-simple-image-banner-loclaised }}
             {{~/if}}
 
+            {{#if (test this._meta.schema (toRegex ".*/simple-banner.json")) ~}}
+            {{> amp-template-advanced-banner }}
+            {{~/if}}
+
             {{#if (test this._meta.schema (toRegex ".*/card")) ~}}
             {{> amp-template-card }}
             {{~/if}}

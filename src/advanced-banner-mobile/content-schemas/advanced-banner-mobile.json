@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "{CONTENT_TYPE_BASEPATH}/advanced-banner.json",
-  "title": "Advanced Banner",
+  "$id": "{CONTENT_TYPE_BASEPATH}/advanced-banner-mobile.json",
+  "title": "Advanced Banner - mobil",
   "description": "Banner accelerator",
   "allOf": [
     {
@@ -38,6 +38,7 @@
     "descriptionFontSize",
     "descriptionFontWeight",
     "descriptionFontColour",
+    "blur",
     "hideMobileText",
     "button",
     "textPositionHorizontal",
@@ -75,6 +76,24 @@
     "subheaderloc": {
       "title": "Subheader",
       "description": "Add subheader text",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
+        }
+      ],
+      "ui:extension": {
+        "name": "localization"
+      }
+    },
+    "subheaderConstant_mobil":{
+      "title":"",
+      "description":"",
+      "type":"string",
+      "const":"Add mobile subheader text below"
+    },
+    "subheaderloc_mobil": {
+      "title": "Subheader",
+      "description": "Add subheader text for mobile",
       "allOf": [
         {
           "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
@@ -125,6 +144,24 @@
         "name": "localization"
       }
     },
+    "headerConstant_mobil":{
+      "title":"",
+      "description":"",
+      "type":"string",
+      "const":"Add mobile header text below"
+    },
+    "headerloc_mobil": {
+      "title": "Header",
+      "description": "Add header text for mobile",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
+        }
+      ],
+      "ui:extension": {
+        "name": "localization"
+      }
+    },
     "headerFontSize": {
       "title": "Header Font Size",
       "description": "Specify a font size",
@@ -151,6 +188,24 @@
     "descriptionloc": {
       "title": "Description",
       "description": "Add description text",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
+        }
+      ],
+      "ui:extension": {
+        "name": "localization"
+      }
+    },
+    "descriptionConstant_mobil":{
+      "title":"",
+      "description":"",
+      "type":"string",
+      "const":"Add mobile description text below"
+    },
+    "descriptionloc_mobil": {
+      "title": "Description",
+      "description": "Add description text for mobile",
       "allOf": [
         {
           "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
@@ -266,6 +321,11 @@
     "showVideoTitle": {
       "title": "Show Content Above Video",
       "description": "Show headline, copy, CTA, etc above video",
+      "type": "boolean"
+    },
+    "blur": {
+      "title": "Blur text backround?",
+      "description": "Blur text background",
       "type": "boolean"
     }
   }

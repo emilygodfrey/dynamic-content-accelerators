@@ -14,6 +14,16 @@
       "type": "string",
       "const": "Page"
     },
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "deliveryKey": {
+          "type": "string",
+          "title": "Delivery key",
+          "description": "Enter the delivery key for this item"
+        }
+      }
+    },
     "contentTypes": {
       "type": "array",
       "items": {
@@ -26,7 +36,7 @@
               "contentType": {
                 "enum": [
                   "{CONTENT_TYPE_BASEPATH}/advanced-banner.json",
-                  "{CONTENT_TYPE_BASEPATH}/simple-banner.json",                
+                  "{CONTENT_TYPE_BASEPATH}/simple-banner.json",
                   "{CONTENT_TYPE_BASEPATH}/simple-image-banner.json",
                   "{CONTENT_TYPE_BASEPATH}/slider.json",
                   "{CONTENT_TYPE_BASEPATH}/split-block.json",
@@ -47,5 +57,5 @@
       "title": "Content types"
     }
   },
-  "propertyOrder": ["contentTypes", "component"]
+  "propertyOrder": ["_meata_", "contentTypes", "component"]
 }
