@@ -81,7 +81,7 @@
         }
       ],
       "ui:extension": {
-        "name": "localization"
+        "name": "localisation"
       }
     },
     "subheaderStyle": {
@@ -122,7 +122,7 @@
         }
       ],
       "ui:extension": {
-        "name": "localization"
+        "name": "localisation"
       }
     },
     "headerFontSize": {
@@ -157,7 +157,7 @@
         }
       ],
       "ui:extension": {
-        "name": "localization"
+        "name": "localisation"
       }
     },
     "descriptionFontSize": {
