@@ -17,19 +17,19 @@
           flex-direction: row;
           padding: 2rem;
       }
-  
+
       @media (max-width: 770px) {
            .blog-list {
               flex-direction: column;
           }
       }
-  
+
       .blog-list-facets {
           flex: 0.2;
           display: flex;
           flex-direction: column;
       }
-  
+
       .blog-list-facets h2 {
           font-family: 'Roboto Condensed', sans-serif;
           font-weight: 700;
@@ -38,11 +38,11 @@
           font-size: 30px;
           margin-top: 20px;
       }
-  
+
       .blog-list-results {
           flex: 0.8;
       }
-  
+
       .ais-Hits-item {
           margin-top: unset !important;
           margin-left: unset !important;
@@ -52,11 +52,11 @@
           -webkit-box-shadow: unset !important;
           box-shadow: unset !important;
       }
-  
+
       .ais-SearchBox {
           padding-right: 10px;
       }
-  
+
       #pagination {
           margin: 10px;
       }
@@ -70,23 +70,23 @@
 
       <div class="blog-list-facets">
           <div id="searchbox" class="ais-SearchBox"></div>
-  
+
           <h2>Category</h2>
           <div id="category-list"></div>
-  
+
           <h2>Author</h2>
           <div id="author-list"></div>
-  
+
           <div id="hits-per-page" style="display: none;"></div>
       </div>
-  
+
       <div class="blog-list-results">
           <div class="amp-dc-card-list amp-dc-prod-3-rows amp-dc-cards-hero">
               <div id="hits"></div>
           </div>
           <div id="pagination"></div>
       </div>
-  
+
   </div>
 
 
@@ -97,35 +97,35 @@
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
     <script>
       /* global instantsearch algoliasearch */
-  
+
       var vse = window.AmpCa.Utils.getUrlParameter('vse');
 
       const newsearch = instantsearch({
-          indexName: vse ? 'Christ-POC.christ-blog-posts-staging':'Christ-POC.christ-blog-posts',
-          searchClient: algoliasearch('4BS5I6EVVD', '425850c8f493a1b537da418e5f542cfd'),
+          indexName: vse ? 'editor-hackathon.expondo-hackathon-blog-post-staging':'editor-hackathon.expondo-hackathon-blog-post',
+          searchClient: algoliasearch('4BS5I6EVVD', 'bec11c0c119efb10d947d7c13e33c0e3'),
           hitsPerPage: 5
       });
-  
+
       newsearch.addWidget(
           instantsearch.widgets.searchBox({
               container: '#searchbox',
           })
       );
-  
+
       newsearch.addWidget(
           instantsearch.widgets.refinementList({
               container: '#category-list',
               attribute: 'snippet.category',
           })
       );
-  
+
       newsearch.addWidget(
           instantsearch.widgets.refinementList({
               container: '#author-list',
               attribute: 'snippet.author',
           })
       );
-  
+
       newsearch.addWidget(
           instantsearch.widgets.hits({
               hitsPerPage: 5,
@@ -154,13 +154,13 @@
               },
           })
       );
-  
+
       newsearch.addWidget(
           instantsearch.widgets.pagination({
               container: '#pagination',
           })
       );
-  
+
       newsearch.addWidget(
           instantsearch.widgets.hitsPerPage({
               container: '#hits-per-page',
@@ -169,10 +169,10 @@
                   { label: '10 hits per page', value: 10 },
               ],
           }));
-  
+
           newsearch.start();
-  
+
   </script>
-  
+
   </body>
 </html>

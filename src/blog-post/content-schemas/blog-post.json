@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "{CONTENT_TYPE_BASEPATH}/page.json",
-  "title": "Page",
-  "description": "Page accelerator",
+  "$id": "{CONTENT_TYPE_BASEPATH}/blog-post.json",
+  "title": "Blog Post",
+  "description": "Blog post accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
@@ -11,20 +11,26 @@
   "type": "object",
   "properties": {
     "component": {
-      "type": "string",
-      "const": "Page"
-    },
-    "_meta": {
+			"type": "string",
+			"const": "BlogPost"
+		},
+    "snippet": {
       "type": "object",
-      "properties": {
-        "deliveryKey": {
-          "type": "string",
-          "title": "Delivery key",
-          "description": "Enter the delivery key for this item"
+      "title": "Snippet",
+      "description": "",
+      "allOf": [
+        {
+          "$ref": "https://amplience.com/composablecommerce/accelerator-partials.json#/definitions/snippet"
         }
-      }
+      ]
     },
-    "contentTypes": {
+    "title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Title"
+    },
+    "content": {
       "type": "array",
       "items": {
         "allOf": [
@@ -34,6 +40,7 @@
           {
             "properties": {
               "contentType": {
+                "title": "Content",
                 "enum": [
                   "{CONTENT_TYPE_BASEPATH}/advanced-banner.json",
                   "{CONTENT_TYPE_BASEPATH}/simple-banner.json",
@@ -48,15 +55,16 @@
                   "{CONTENT_TYPE_BASEPATH}/curated-product-list.json",
                   "{CONTENT_TYPE_BASEPATH}/video.json",
                   "{CONTENT_TYPE_BASEPATH}/blog-list.json",
-                  "{CONTENT_TYPE_BASEPATH}/external-block.json"
-                ]
+                  "{CONTENT_TYPE_BASEPATH}/external-block.json"               ]
               }
             }
           }
         ]
       },
-      "title": "Content types"
+      "minItems": 0,
+      "maxItems": 20,
+      "title": "Content"
     }
   },
-  "propertyOrder": ["_meata_", "contentTypes", "component"]
+  "propertyOrder": ["snippet", "title", "content", "component"]
 }

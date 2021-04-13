@@ -42,7 +42,8 @@
                   "{CONTENT_TYPE_BASEPATH}/rich-text.json",
                   "{CONTENT_TYPE_BASEPATH}/curated-product-list.json",
                   "{CONTENT_TYPE_BASEPATH}/video.json",
-                  "{CONTENT_TYPE_BASEPATH}/blog-list.json"
+                  "{CONTENT_TYPE_BASEPATH}/blog-list.json",
+                  "{CONTENT_TYPE_BASEPATH}/external-block.json"
                 ]
               }
             }

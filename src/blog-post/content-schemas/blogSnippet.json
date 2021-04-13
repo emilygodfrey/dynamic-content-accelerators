@@ -43,12 +43,10 @@
       "items": {
         "type": "string",
         "enum": [
-          "Frauen",
-          "Männer",
-          "Marken",
-          "Premium",
-          "Uhren",
-          "Schmuck"
+          "Gastronomiebedarf",
+          "Handwerksbedarf",
+          "Industriebedarf",
+          "Sport & Gesundeit"
         ]
       }
     },

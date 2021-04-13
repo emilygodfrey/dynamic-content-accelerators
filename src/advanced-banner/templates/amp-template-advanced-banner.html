@@ -95,11 +95,13 @@
         {{#if hasVideo}}
         {{#if showVideoTitle}}
         <div class="o-dc-video-title">
-            {{#if headerloc}}<h1 class="o-dc-text-headline1 {{#if headerFontSize}}o-dc-text-headline1-{{headerFontSize}}{{/if}} {{#if headerFontWeight}}o-dc-text-{{headerFontWeight}}{{/if}} {{#if headerStyle}}o-dc-text-{{headerStyle}}{{/if}}" {{#if headerFontColour}}style="color:{{headerFontColour}}"{{/if}}>{{{headerloc}}}</h1>{{/if}}
-            {{#if subheader}}<h2 class="o-dc-text-headline2 {{#if headline2size}}o-dc-text-headline2-{{headline2size}}{{/if}} {{#if subheaderFontWeight}}o-dc-text-{{subheaderFontWeight}}{{/if}} {{#if subheaderStyle}}o-dc-text-{{subheaderStyle}}{{/if}}" {{#if subheaderFontColour}}style="color:{{subheaderFontColour}}"{{/if}}>{{{subheader}}}</h2>{{/if}}
-            {{#if description}}<p class="o-dc-text-copy {{#if descriptionFontSize}}o-dc-text-copy-{{descriptionFontSize}}{{/if}} {{#if descriptionFontWeight}}o-dc-text-{{descriptionFontWeight}}{{/if}} {{#if descriptionStyle}}o-dc-text-{{descriptionStyle}}{{/if}} {{#if hideMobileText}}show-for-medium{{/if}}" {{#if descriptionFontColour}}style="color:{{descriptionFontColour}}"{{/if}}>{{description}}</p>{{/if}}
-            {{#if button}}<a href="{{button.buttonLink}}" class="o-dc-button {{button.buttonStyle}} {{#if button.buttonFontWeight}}o-dc-text-{{button.buttonFontWeight}}{{/if}} {{button.buttonTransition}}{{#if button.buttonBackgroundColour}} inline-color {{/if}}" style="{{#if button.buttonBackgroundColour}}background:{{button.buttonBackgroundColour}};{{/if}}{{#if button.buttonForegroundColour}} color:{{button.buttonForegroundColour}};{{/if}}">{{button.buttonLabel}}{{#is button.buttonTransition 'hvr-icon-forward'}} <i class="kiplingicon-chevron-right hvr-icon"></i>{{/is}}{{#is button.buttonTransition 'hvr-icon-fade'}} <i class="kiplingicon-check hvr-icon"></i>{{/is}}</a>{{/if}}
-
+          {{#if headerloc}}<h1 class="o-dc-text-headline1 {{#if headerFontSize}}o-dc-text-headline1-{{headerFontSize}}{{/if}} {{#if headerFontWeight}}o-dc-text-{{headerFontWeight}}{{/if}} {{#if headerStyle}}o-dc-text-{{headerStyle}}{{/if}}" {{#if headerFontColour}}style="color:{{headerFontColour}}"{{/if}}>{{{headerloc}}}</h1>{{/if}}
+          {{#if subheaderloc}}<h2 class="o-dc-text-headline2 {{#if subheaderFontSize}}o-dc-text-headline2-{{subheaderFontSize}}{{/if}} {{#if subheaderFontWeight}}o-dc-text-{{subheaderFontWeight}}{{/if}} {{#if subheaderStyle}}o-dc-text-{{subheaderStyle}}{{/if}}" {{#if subheaderFontColour}}style="color:{{subheaderFontColour}}"{{/if}}>{{{subheaderloc}}}</h2>{{/if}}
+          {{#if descriptionloc}}<p class="o-dc-text-copy {{#if descriptionFontSize}}o-dc-text-copy-{{descriptionFontSize}}{{/if}} {{#if descriptionFontWeight}}o-dc-text-{{descriptionFontWeight}}{{/if}} {{#if descriptionStyle}}o-dc-text-{{descriptionStyle}}{{/if}} {{#if hideMobileText}}show-for-medium{{/if}}"
+          {{#if descriptionFontColour}}style="color:{{descriptionFontColour}}"{{/if}}>{{descriptionloc}}</p>{{/if}}
+          {{#if button.buttonLabel}}
+           {{> amp-template-button-wrap this}}
+          {{/if}}
         </div>
         {{/if}}
         {{/if}}
