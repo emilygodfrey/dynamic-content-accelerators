@@ -19,11 +19,11 @@
     if (sDefault) return sDefault;
   };
 
-  var vse = getUrlParameter('vse', 'editor-hackathon.cdn.content.amplience.net');
+  var vse = getUrlParameter('vse', 'bbrtest.cdn.content.amplience.net');
   var crsvse = getUrlParameter('vse', 'c1-orig.adis.ws');
-  var key = getUrlParameter('key', 'expondo/web/home');
-  var menukey = getUrlParameter('menukey', 'expondo/web/navigation');
-  var locale = getUrlParameter('locale', 'de-DE,en-GB,en-*');
+  var key = getUrlParameter('key', 'bbr/web/home');
+  var menukey = getUrlParameter('menukey', 'bbr/web/navigation');
+  var locale = getUrlParameter('locale', 'en-GB,en-*');
   var cid = getUrlParameter('cid');
   var timestamp = getUrlParameter('timestamp');
   var segmentParam = getUrlParameter('segment');
