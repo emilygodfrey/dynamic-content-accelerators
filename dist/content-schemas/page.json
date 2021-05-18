@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://gap.com/page.json",
+  "$id": "https://amplience.com/composablecommerce/page.json",
   "title": "Page",
   "description": "Page accelerator",
   "allOf": [
@@ -14,6 +14,16 @@
       "type": "string",
       "const": "Page"
     },
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "deliveryKey": {
+          "type": "string",
+          "title": "Delivery key",
+          "description": "Enter the delivery key for this item"
+        }
+      }
+    },
     "contentTypes": {
       "type": "array",
       "items": {
@@ -25,24 +35,20 @@
             "properties": {
               "contentType": {
                 "enum": [
-                  "https://gap.com/image.json",
-                  "https://gap.com/banner.json",
-                  "https://gap.com/simple-image-banner.json",
-                  "https://gap.com/simple-image-banner-localised.json",
-                  "https://gap.com/advanced-banner.json",
-                  "https://gap.com/blog-post.json",
-                  "https://gap.com/blog-list.json",
-                  "https://gap.com/card.json",
-                  "https://gap.com/card-list.json",
-                  "https://gap.com/curated-product-list.json",
-                  "https://gap.com/external-block.json",
-                  "https://gap.com/promo-list.json",
-                  "https://gap.com/slider.json",
-                  "https://gap.com/split-block.json",
-                  "https://gap.com/text.json",
-                  "https://gap.com/title.json",
-                  "https://gap.com/rich-text.json",
-                  "https://gap.com/video.json"
+                  "https://amplience.com/composablecommerce/advanced-banner.json",
+                  "https://amplience.com/composablecommerce/simple-banner.json",
+                  "https://amplience.com/composablecommerce/simple-image-banner.json",
+                  "https://amplience.com/composablecommerce/slider.json",
+                  "https://amplience.com/composablecommerce/split-block.json",
+                  "https://amplience.com/composablecommerce/card.json",
+                  "https://amplience.com/composablecommerce/card-list.json",
+                  "https://amplience.com/composablecommerce/image.json",
+                  "https://amplience.com/composablecommerce/rich-text.json",
+                  "https://amplience.com/composablecommerce/title.json",
+                  "https://amplience.com/composablecommerce/curated-product-list.json",
+                  "https://amplience.com/composablecommerce/video.json",
+                  "https://amplience.com/composablecommerce/blog-list.json",
+                  "https://amplience.com/composablecommerce/external-block.json"
                 ]
               }
             }
@@ -52,5 +58,5 @@
       "title": "Content types"
     }
   },
-  "propertyOrder": ["contentTypes", "component"]
+  "propertyOrder": ["_meata_", "contentTypes", "component"]
 }

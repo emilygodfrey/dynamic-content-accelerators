@@ -68,10 +68,7 @@
         {
           "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
         }
-      ],
-      "ui:extension": {
-        "name": "localisation"
-      }
+      ]
     },
     "subheaderStyle": {
       "title": "Subheader Colour",
@@ -110,10 +107,7 @@
         {
           "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
         }
-      ],
-      "ui:extension": {
-        "name": "localisation"
-      }
+      ]
     },
     "headerFontSize": {
       "title": "Header Font Size",
@@ -147,10 +141,7 @@
         {
           "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
         }
-      ],
-      "ui:extension": {
-        "name": "localisation"
-      }
+      ]
     },
     "descriptionFontSize": {
       "title": "Description Font Size",

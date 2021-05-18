@@ -1,5 +1,5 @@
 {
     "body": "../content-schemas/promo.json",
-    "schemaId": "https://gap.com/promo.json",
+    "schemaId": "https://amplience.com/composablecommerce/promo.json",
     "validationLevel": "CONTENT_TYPE"
   }

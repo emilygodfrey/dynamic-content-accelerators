@@ -1,5 +1,5 @@
 {
     "body": "../content-schemas/slider.json",
-    "schemaId": "https://gap.com/slider.json",
+    "schemaId": "https://amplience.com/composablecommerce/slider.json",
     "validationLevel": "CONTENT_TYPE"
   }

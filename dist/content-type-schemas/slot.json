@@ -1,5 +1,5 @@
 {
     "body": "../content-schemas/slot.json",
-    "schemaId": "https://gap.com/slot.json",
+    "schemaId": "https://amplience.com/composablecommerce/slot.json",
     "validationLevel": "SLOT"
   }

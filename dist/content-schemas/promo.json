@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://gap.com/promo.json",
+  "$id": "https://amplience.com/composablecommerce/promo.json",
   "title": "Promo",
   "description": "Promo accelerator",
   "allOf": [
@@ -57,7 +57,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://gap.com/accelerator-partials.json#/definitions/link"
+          "$ref": "https://amplience.com/composablecommerce/accelerator-partials.json#/definitions/link"
         }
       ]
     }

@@ -19,10 +19,7 @@
         {
           "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
         }
-      ],
-      "ui:extension": {
-        "name": "localisation"
-      }
+      ]
       },
       "buttonLink": {
         "title": "Button Link",

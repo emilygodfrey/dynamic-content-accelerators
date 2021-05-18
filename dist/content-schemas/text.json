@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://gap.com/text.json",
+  "$id": "https://amplience.com/composablecommerce/text.json",
   "title": "Text",
   "description": "Text accelerator",
   "allOf": [

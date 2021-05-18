@@ -1,5 +1,5 @@
 {
     "body": "../content-schemas/video.json",
-    "schemaId": "https://gap.com/video.json",
+    "schemaId": "https://amplience.com/composablecommerce/video.json",
     "validationLevel": "CONTENT_TYPE"
   }

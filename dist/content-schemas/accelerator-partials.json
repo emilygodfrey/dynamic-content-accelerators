@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://gap.com/accelerator-partials.json",
+  "$id": "https://amplience.com/composablecommerce/accelerator-partials.json",
   "title": "Accelerator partials",
   "description": "Partials",
   "allOf": [
@@ -56,8 +56,7 @@
           "minLength": 0,
           "maxLength": 2000,
           "title": "Value",
-          "pattern": "^(http://www.|https://www.|http://|https://)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$",
-          "description": "Enter an absolute URL"
+          "description": "Enter a URL / Delivery Key"
         }
       }
     },
@@ -71,7 +70,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://gap.com/image.json"
+              "$ref": "https://amplience.com/composablecommerce/image.json"
             }
           ],
           "title": "Image"

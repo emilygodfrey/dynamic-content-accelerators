@@ -1,21 +1,16 @@
 {
-	"contentTypeUri": "https://gap.com/slot.json",
+	"contentTypeUri": "https://amplience.com/composablecommerce/slot.json",
 	"settings": {
 		"label": "Slot",
 		"visualizations": [
 			{
 				"label": "Visualization",
-				"templatedUri": "https://{{vse.domain}}/v1/content/demo/content-item/{{content.sys.id}}?template=acc-template-visualization&locale={{locales}},en-*,*",
+				"templatedUri": "https://{{vse.domain}}/v1/content/demo/content-item/{{content.sys.id}}?template=amp-template-visualization&locale={{locales}},en-*,*&vse={{vse.domain}}",
 				"default": true
 			},
 			{
-				"label": "JSON (CDV2)",
-				"templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/dc-visualization-content-delivery/index.html?vse={{vse.domain}}&id={{content.sys.id}}&format=inlined&depth=all&v2=true&locale={{locales}},en-*,*",
-				"default": false
-			},
-			{
-				"label": "JSON (CDV1)",
-				"templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/dc-visualization-content-delivery/index.html?vse={{vse.domain}}&id={{content.sys.id}}&format=inlined&depth=all&v2=false&locale={{locales}},en-*,*",
+				"label": "JSON",
+				"templatedUri": "https://presalesadisws.s3.eu-west-1.amazonaws.com/dynamic-content/dc-visualization-content-delivery/index.html?vse={{vse.domain}}&id={{content.sys.id}}&format=inlined&depth=all&v2=true&locale={{locales}}",
 				"default": false
 			}
 		],
@@ -27,7 +22,7 @@
 		],
 		"cards": [
 			{
-				"templatedUri": "https://{{vse.domain}}/v1/content/demo/content-item/{{content.sys.id}}?template=acc-template-cardsPreview"
+				"templatedUri": "https://{{vse.domain}}/v1/content/demo/content-item/{{content.sys.id}}?template=amp-template-cardsPreview&locale={{locales}},en-*,*"
 			}
 		]
 	},

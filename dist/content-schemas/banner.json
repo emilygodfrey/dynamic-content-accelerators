@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://gap.com/banner.json",
+  "$id": "https://amplience.com/composablecommerce/banner.json",
   "title": "Banner",
   "description": "Banner accelerator",
   "allOf": [
@@ -19,7 +19,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://gap.com/image.json"
+          "$ref": "https://amplience.com/composablecommerce/image.json"
         }
       ],
       "title": "Banner image"
@@ -46,7 +46,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://gap.com/accelerator-partials.json#/definitions/link"
+          "$ref": "https://amplience.com/composablecommerce/accelerator-partials.json#/definitions/link"
         }
       ]
     },

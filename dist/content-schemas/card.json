@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://gap.com/card.json",
+  "$id": "https://amplience.com/composablecommerce/card.json",
   "title": "Card",
   "description": "Card accelerator",
   "allOf": [
@@ -19,7 +19,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://gap.com/image.json"
+          "$ref": "https://amplience.com/composablecommerce/image.json"
         }
       ],
       "title": "Card image"
@@ -40,7 +40,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://gap.com/accelerator-partials.json#/definitions/link"
+          "$ref": "https://amplience.com/composablecommerce/accelerator-partials.json#/definitions/link"
         }
       ]
     }
