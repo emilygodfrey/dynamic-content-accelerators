@@ -19,10 +19,10 @@
     if (sDefault) return sDefault;
   };
 
-  var vse = getUrlParameter('vse', 'bbrtest.cdn.content.amplience.net');
+  var vse = getUrlParameter('vse', 'bravissimo.cdn.content.amplience.net');
   var crsvse = getUrlParameter('vse', 'c1-orig.adis.ws');
-  var key = getUrlParameter('key', 'bbr/web/home');
-  var menukey = getUrlParameter('menukey', 'bbr/web/navigation');
+  var key = getUrlParameter('key', 'bravissimo/web/home');
+  var menukey = getUrlParameter('menukey', 'bravissimo/web/navigation');
   var locale = getUrlParameter('locale', 'en-GB,en-*');
   var cid = getUrlParameter('cid');
   var timestamp = getUrlParameter('timestamp');
