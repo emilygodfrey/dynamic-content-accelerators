@@ -17,5 +17,5 @@
       }
     ]
   },
-  "repositories": ["slots"]
+  "repositories": ["slotrepo"]
 }

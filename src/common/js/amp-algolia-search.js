@@ -8,7 +8,7 @@
       // We have an item we should now trigger the search SDK.
       var searchClient = algoliasearch('{ALGOLIA_ID}', '{ALGOLIA_SECRET}');
       var vse = window.AmpCa.Utils.getUrlParameter('vse');
-      var indexName = vse ? 'bbrtest.blog-posts-staging':'bbrtest.blog-posts'
+      var indexName = vse ? 'bravissimo-eval.blog-posts-staging':'bravissimo-eval.blog-posts'
 
       searchElements.forEach(function (item) {
         var max = item.getAttribute('data-amp-dc-numItems');

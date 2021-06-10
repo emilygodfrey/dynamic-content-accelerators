@@ -17,6 +17,5 @@
         }
       ]
     },
-    "repositories": ["content"]
+    "repositories": ["contentrepo"]
   }
-  
