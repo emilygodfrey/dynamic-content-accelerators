@@ -43,10 +43,12 @@
       "items": {
         "type": "string",
         "enum": [
-          "Bordeaux wine",
-          "Own selection wine",
-          "Spirits",
-          "BBX"
+          "New In",
+          "Lingerie",
+          "Swimwear",
+          "Clothing",
+          "Sportswear",
+          "Nightwear"
         ]
       }
     },
